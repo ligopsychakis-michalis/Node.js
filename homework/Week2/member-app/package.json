@@ -1,0 +1,23 @@
+{
+  "name": "member-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "moment": "^2.24.0",
+    "uuid": "^7.0.2"
+  },
+  "devDependencies": {
+    "express-handlebars": "^3.1.0",
+    "nodemon": "^2.0.2"
+  }
+}

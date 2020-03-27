@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div class= "container mt-4">
+        <h1><%=title%></h1>
+        <form class="mb-4" action="/api/members" method="POST">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" name="name">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" name="email">
+            <input type="submit" class="btn btn-dark btn-block mt-2" value="submit">
+        </form>
+        <h3>Members are:</h3>
+        <ul class="list-group">
+            <% members.forEach(member => { %>
+                <li class="list-group-item"><%=member.name%>: <%=member.email%></li>
+            <% }) %>
+        </ul>
+        <a href="/api/members" class="btn btn-dark mt-4">Visit API</a>
+    </div>
+</body>
+</html>
